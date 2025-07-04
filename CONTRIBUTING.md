@@ -19,7 +19,6 @@ To contribute to the project, please follow these steps:
 4. **Write tests** to verify your updates 🧪
 5. **Ensure all tests pass** Run the test suite and your newly added tests (if added) ✅
 6. **Update documentation** as needed 📝
-6. **Update version** Once updates have been made, update the version of the project accordingly 📦
 7. **Create pull request and document changes** with a clear description of your changes, so that a DESP-AAS Sandbox member can confirm and merge🚦
 
 The description must be the following: 
@@ -61,14 +60,6 @@ feat: add new feature
 fix: resolve bug
 chore: any change that is outside of the application itself such as local configuration, bundling or testing
 ```
-
-### Versionning guidelines
-The versionning of the project is done with the following format:
-<MAJOR>.<MINOR>.<PATCH>
-1. MAJOR version when you make incompatible changes with previous releases
-2. MINOR version when you add functionality in a backward compatible manner
-3. PATCH version when you make backward compatible bug fixes
-
 
 ## Testing
 Before submitting your contribution, please ensure that you have thoroughly tested your changes. This includes:
