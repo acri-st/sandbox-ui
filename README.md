@@ -45,7 +45,9 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone https://gitlab.acri-cwa.fr/desp-aas/sandbox_service/sandbox-ui
+git clone https://github.com/acri-st/DESPAAS-sandbox-ui.git
+# OR
+git clone git@github.com:acri-st/DESPAAS-sandbox-ui.git
 cd sandbox-ui
 ```
 
