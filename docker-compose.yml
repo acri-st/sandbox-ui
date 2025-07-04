@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+    
+  # ======================================
+  # -- frontend
+  # ======================================
+  frontend:
+    # user: "0:${GID}" # Run as root, to be avoided as much as possible, check the troubleshooting
+    build:
+      context: .
+      # dockerfile: ./_prod/Dockerfile
+      dockerfile: ./_local/Dockerfile
+    volumes:
+      - ./:/frontend/
+    ports:
+      - 8100:8100

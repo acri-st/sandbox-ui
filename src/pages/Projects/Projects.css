@@ -1,0 +1,169 @@
+
+@media screen and (max-width: 950px) {
+    #projects .fixed-page-content{
+        padding: 10px;
+    }
+    #projects .section{
+        width: calc(100%)
+    }
+}
+
+#projects-header{
+    display: flex;
+}
+
+#projects-header .header-box-section{
+    margin-bottom: 0px;
+}
+
+    #projects-header .header-box-section{
+        display: flex;
+        flex-direction: column;
+    }
+        #projects-header .header-box{
+            flex: 1;
+        }
+
+#projects-user-credentials{
+    background-color: var(--sub-section-color);
+    border-radius: 30px;
+    /* margin-bottom: 30px; */
+    margin-left: 30px;
+    margin-top: 55px;
+    flex:1 0 500px;
+    padding: 20px;
+}
+    #projects-user-credentials h2{
+        margin-bottom: 10px;
+    }
+    #projects-user-credentials p{
+        margin-top: 0px;
+    }
+    .user-credential{
+        display: flex;
+        font-size: 16px;
+        margin-bottom: 20px;
+        align-items: center;
+
+    }
+        .user-credential label{
+            font-size: 1em;
+            width: 100px;
+            font-weight: 800;
+        }
+        .loading-user-credential-value{
+            background-color: rgb(var(--loading-color-2));
+            height: 26px;
+            border-radius: var(--loading-item-radius);
+            flex: 1;
+        }
+        #user-credential-password,
+        .user-credential-value{
+            background-color: rgb(var(--background-color-2));
+            padding: 5px 10px;
+            border-radius: 5px;
+            flex:1;
+            box-shadow: 0px 0px 10px 0px black;
+            border: none;
+            color: rgb(var(--font-color));
+            font-size: 14px;
+        }
+        .user-credential-value-container{
+            align-items: center;
+            flex:1;
+            display: flex;
+        }
+            .user-credential-value-container #show-password,
+            .user-credential-value-container .copy-to-clipboard{
+                margin-left:10px;
+                opacity: 0.8;
+                transition: var(--transition-time);
+                cursor: pointer;
+            }
+            .user-credential-value-container #show-password{
+                color: white;
+            }
+            .user-credential-value-container .copy-to-clipboard{
+                color:rgb(var(--theme-color-1));
+            }
+                .user-credential-value-container #show-password,
+                .user-credential-value-container .copy-to-clipboard:hover{
+                    opacity: 1;
+                }
+
+#projects-list{
+    /* border: 1px solid rgba(255,255,255,0.3); */
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    /* overflow: auto; */
+}
+    #projects-list-searchbar{
+        padding:30px;
+    }
+    #projects-list-table{
+        flex:1;
+        padding:30px;
+        background-color: rgba(0,0,0,0.5);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        min-height: 0px;
+    }
+        #projects-list-table .table{
+            display: flex;
+            flex-direction: column;
+            min-height: 0px;
+        }
+        #projects-list-table table{
+            display: flex;
+            flex-direction: column;
+            min-height: 0px;
+        }
+        #projects-list-table thead{
+            display: flex;
+            /* flex:1; */
+        }
+            #projects-list-table tr{
+                display: flex;
+                flex:1;
+            }
+            #projects-list-table th,
+            #projects-list-table td{
+                flex:1;
+            }
+        #projects-list-table tbody{
+            display: flex;
+            flex-direction: column;
+            flex:1;
+            min-height: 0px;
+            overflow: auto;
+        }
+
+    .project-item-value{
+        display: flex;
+        align-items: center;
+    }
+        .project-item-value svg{
+            margin-right:8px;
+            color: rgb(var(--theme-color-1));
+        }
+
+        #create-project{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+
+    #projects-list-access{
+        padding: 20px;
+    }
+
+
+#list-create-new-project{
+    margin:0px auto;
+    /* margin-top:30px; */
+    text-align: center;
+    display: block;
+}

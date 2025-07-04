@@ -1,0 +1,95 @@
+include:
+  - remote: https://gitlab.acri-cwa.fr/devops/ci-templates/-/raw/main/workflow_template.yaml
+
+variables:
+  SERVICE_NAME: sandbox-ui
+  
+stages:
+  - validate
+  - build
+  - deploy
+  - scan
+  - release
+
+security_scan:
+  stage: scan
+  image:
+    name: aquasec/trivy:latest
+    entrypoint: [""]
+  # tags:
+  #   - k8s
+  before_script:
+    - mkdir -p /root/.docker
+    - echo $DOCKER_AUTH_CONFIG > /root/.docker/config.json
+  script:
+    - trivy image harbor.shared.acrist-services.com/dsy/desp-aas/${SERVICE_NAME}:development --format json --output trivy_report.json
+  artifacts:
+    paths:
+      - trivy_report.json
+  allow_failure: true
+
+virus-scan:
+  stage: validate
+  image: gitlabreg.acri-cwa.fr:443/dsy/automation/antivirus-scanner/av-scanner:D-2
+  # tags:
+  #   - k8s
+  cache:
+    key: clamav-db
+    paths:
+      - /var/lib/clamav
+  variables:
+    SCAN_PATH: $CI_PROJECT_DIR
+  script:
+    - timeout 5m freshclam --no-warnings
+    - clamscan --infected --allmatch=yes --recursive=yes --archive-verbose --max-filesize=200M --log=clamscan-report.txt $SCAN_PATH
+  allow_failure: false
+  artifacts:
+    when: always
+    paths:
+      - clamscan-report.txt
+
+# ========================================
+# BUILDS
+# ========================================
+build-sandbox-ui:
+  extends:
+    - .build
+  variables:
+    SOURCEPATH: ${CI_PROJECT_DIR}
+    DOCKERFILE: _prod/Dockerfile
+    IMG_REGISTRY: harbor
+    HARBOR_IMAGE_PROJECT: 'desp-aas/sandbox'
+  rules:
+    - when: always
+
+# ========================================
+# ROLLOUTS
+# ========================================
+rollout-sandbox-ui:
+  extends:
+    - .rollout
+  variables:
+    K8S_CONTEXT: despaas-preprod
+    K8S_NS: desp-aas
+    K8S_DEPLOYMENT: sandbox-ui
+  rules:
+    - when: always
+
+# ========================================
+# OTHER
+# ========================================
+release-patch:
+  extends:
+    - .release
+
+release-minor:
+  extends:
+    - .release
+  variables:
+    RELEASE_TYPE: "minor"
+
+release-major:
+  extends:
+    - .release
+  variables:
+    RELEASE_TYPE: "major"

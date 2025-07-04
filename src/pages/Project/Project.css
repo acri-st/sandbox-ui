@@ -1,0 +1,268 @@
+#project-tabs{
+    display: flex;
+    align-items: center;
+    padding:  30px;
+    padding-left: 60px;
+    background-color: var(--sub-section-color);
+    /* justify-content: space-evenly; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+    #project-tabs .project-server-status-container{
+        margin-left: auto;
+        text-align: right;
+    }
+    .project-tab{
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: capitalize;
+        padding: 0px 20px;
+        margin:0px 30px;
+        transition: 0.2s;
+        cursor: pointer;
+        color: rgb(var(--font-color));
+        text-decoration: none;
+    }
+        .project-tab-label{
+            display: flex;
+            align-items: center;
+            gap:10px;
+        }
+            .project-tab-label .status{
+                font-size: 14px;
+            }
+    .project-tab.active,
+    .project-tab.selected,
+    .project-tab:hover
+    {
+        color:rgb(var(--theme-color-1));
+    }
+
+    #project-section{
+        padding-right: 20px;
+        margin-top: 20px;
+        /* padding-bottom: 20px; */
+        overflow: auto;
+        height: 100%;
+    }
+
+    #project-section .sub-section{
+        background-color: var(--sub-section-color2);
+    }
+
+@media screen and (max-width: 1050px) {
+    #project-tabs{
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .project-tab{
+        font-size: 18px;
+        padding: 0px 10px;
+        margin:0px 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #project-section{
+        margin:0px;
+        width: calc(100% - 5px);
+        margin-top:20px;
+        padding-right: 5px;
+    }
+}
+@media screen and (max-width: 750px) {
+    #project-tabs{
+        padding: 10px;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        gap:10px;
+        align-items: center;
+        /* align-items: flex-start; */
+        width: 100%;
+    }
+    .project-tab{
+        width: calc(50% - 10px);
+        font-size: 18px;
+        justify-content: center;
+        display: flex;
+        /* padding: 0px 5px; */
+        /* margin:0px 10px; */
+        margin:0px;
+    }
+    .project-server-status-container{
+        /* margin-top:30px; */
+        width: 100%;
+        align-items: flex-end;
+        /* align-self: flex-end; */
+        /* justify-content: flex-end; */
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #project .form-field{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 850px) {
+    #project .form-field .form-field-value-with-operations{
+        flex-direction: column;
+        gap:10px;
+        align-items: flex-start;
+    }
+    #project .form-field .form-field-value-operations{
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .project-tab{
+        width: calc(100%);
+    }
+}
+
+
+.project-section-content{
+    display: flex;
+    width: 100%;
+    min-height: 0px;
+    height: 100%;
+    gap:20px;
+    /* flex:1 1; */
+    min-height: 0px;
+}
+
+    .project-section-left-side{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-height: 0px;
+        height: 100%;
+    }
+        .project-section-left-side .sub-section{
+            min-height: 0px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            padding: 40px;
+        }
+    .project-section-right-side{
+        height: 100%;
+    }
+        .project-section-right-side .sub-section{
+            min-height: 0px;
+            height: 100%;
+        }
+    
+
+
+@media screen and (max-width: 1200px) {
+    .project-section-content{
+        height: auto;
+        min-height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .project-section-right-side{
+        height: 250px;
+        /* height: 200px; */
+    }
+}
+@media screen and (max-width: 1200px) {
+    #project .sub-section{
+        padding: 20px;
+        border-radius: 20px;
+    }
+}
+
+.docker-images-values{
+    display: flex;
+    flex-direction: column;
+}
+    .docker-image-value{
+        display: flex;
+        gap: 10px;
+    }
+
+
+
+/*  ==============================
+    VIRTUAL MACHINE 
+    ============================== */
+#project-application-list{
+    display: flex;
+    gap:10px;
+    flex:1;
+    flex-wrap: wrap;
+}
+
+    #project-application-list .project-application-option{
+        flex: 0 0 auto;
+        width: calc(50% - 10px);
+    }
+    @media screen and (max-width: 1000px) {
+        #project-application-list .project-application-option{
+            width: calc(100%);
+        }
+    }
+    .quick-connect .form-field-value{
+        gap:0px;
+    }
+.vm-monitoring-card{
+    margin-bottom: 20px;
+}
+    .vm-monitoring-card-title{
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .vm-monitoring-card-content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .vm-monitoring-card-content-loading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        gap: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 14px;
+    }
+
+
+.vm-monitoring-time-range-selector{
+    display: inline-flex;
+    background-color: rgb(var(--background-color-2));
+    border-radius: 5px;
+    align-self: flex-end;
+}
+    .vm-monitoring-time-range-selector-option{
+        display: flex;
+        width: 40px;
+        height: 25px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+        .vm-monitoring-time-range-selector-option:hover{
+            background: linear-gradient(45deg, rgb(var(--theme-color-1),0.5), rgb(var(--theme-color-2),0.5));
+        }
+        .vm-monitoring-time-range-selector-option.selected{
+            background: linear-gradient(45deg, rgb(var(--theme-color-1)), rgb(var(--theme-color-2)));
+        }

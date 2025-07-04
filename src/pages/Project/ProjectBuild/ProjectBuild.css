@@ -1,0 +1,202 @@
+
+/*  ==============================
+    BUILD 
+    ============================== */
+    #build-content{
+        /* min-width: 0px; */
+        /* width: 100%; */
+    }
+        #build-content > .sub-section{
+            margin-bottom:20px;
+        }
+    
+    #build-content .project-section-left-side{
+        gap: 20px;
+        overflow: hidden;
+    }
+    
+        #build-pipeline-section{
+            display: flex;
+            gap:20px;
+        }
+            #build-current-status-section{
+                flex:0 0 auto;
+                width: fit-content;
+            }
+                #build-current-status{
+                }
+                    #build-current-status-title{
+                        font-size: 22px;
+                        margin-bottom: 10px;
+                        white-space: nowrap;
+                    }
+                    #build-current-status .status{
+                        font-size: 18px;
+                    }
+    
+        @media screen and (max-width: 700px) {
+            #build-pipeline-section{
+                flex-direction: column-reverse;
+            }
+        }
+    
+    #build-pipeline{
+        background-color: rgb(27, 27, 27);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+    }
+        #build-pipeline-steps{
+            display: flex;
+            /* justify-content: space-evenly; */
+            justify-content: center;
+            position: relative;
+            gap:200px;
+            
+        }
+            #build-pipeline-steps:before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                left:0px;
+                top: 95px;
+                border-bottom: 2px dashed rgba(255, 255, 255, 0.371);
+            }
+            .build-pipeline-step{
+                display: flex;
+                flex-direction: column;
+                align-items: center;;
+                gap:15px;
+                background-color: rgb(27, 27, 27);
+                z-index: 15;
+                padding: 30px 0px;
+                position: relative;
+                cursor: pointer;
+            }
+                .build-pipeline-step-name{
+                    padding: 8px;
+                    width: 100px;
+                    font-size: 14px;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: rgb(var(--theme-color-1));
+                    font-weight: 800;
+                    letter-spacing: 2px;
+                }
+                .step-status-job-status,
+                .build-pipeline-step-status{
+                    background-color: rgba(128, 128, 128, 0.186);
+                    color: rgb(169, 169, 169);
+                    border:2px solid rgb(169, 169, 169);
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 14px;
+                }
+                    .step-status-job-status.started,
+                    .step-status-job-status.running,
+                    .build-pipeline-step-status.started,
+                    .build-pipeline-step-status.running{
+                        background-color: rgba(0, 111, 152, 0.186);
+                        color: rgb(122, 178, 255);
+                        border:2px solid rgb(122, 178, 255);
+                    }
+                    .step-status-job-status.succeeded,
+                    .build-pipeline-step-status.succeeded{
+                        background-color: rgba(41, 152, 0, 0.186);
+                        color: rgb(112, 198, 65);
+                        border:2px solid rgb(112, 198, 65);
+                    }
+                    .step-status-job-status.failed,
+                    .build-pipeline-step-status.failed{
+                        background-color: rgba(152, 0, 0, 0.109);
+                        color: rgb(209, 36, 36);
+                        border:2px solid rgb(209, 36, 36);
+                    }
+    
+    
+            .step-status-jobs{
+                flex-direction: column;
+                gap:10px;
+                display: none;
+                background-color: rgb(var(--background-color-3));
+                padding: 10px;
+                border-radius: 10px;
+            }
+            .step-status-jobs.open{
+                display: flex;
+            }
+                .step-status-job{
+                    display: flex;
+                    gap:10px;
+                    align-items: center;
+                }
+                    .step-status-job-status{
+                        height: 24px;
+                        width: 24px;
+                        font-size: 10px;
+                    }
+    
+    
+    #build-logs-section{
+        padding-top:20px;
+    }
+        #build-logs-section .sub-section-content{
+            gap:10px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #build-logs-section .build-logs-title{
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 800;
+            display: flex;
+            align-items: flex-end;
+            gap:10px;
+        }
+            #build-logs-section  .build-logs-title .build-logs-step{
+                font-size: 14px;
+                padding: 5px 10px;
+                background-color: rgb(var(--background-color-3));
+                border-radius: 5px;
+                font-weight: 500;
+            }
+        #build-logs{
+            overflow: auto;
+            padding: 20px;
+            border-radius: 10px;
+            color: rgb(218, 218, 218);
+            background-color: rgb(27, 27, 27);
+            white-space: normal;
+        }
+            #build-logs{
+            }
+                /* #build-logs html{
+                    height: 0px;
+                    display: none;
+                } */
+                    #build-logs h1{
+                        font-size: 30px!important;
+                        line-height: 1.2em;
+                    }
+                    #build-logs th{
+                        font-size: 15px;
+                    }
+                    #build-logs td{
+                        font-size: 15px;
+                    }
+                #build-logs html{
+                    height: 0px;
+                    display: none;
+                    /* padding: 10px; */
+                }
+            #build-logs.build-logs-text{
+                /* white-space: pre-wrap; */
+                font-size: 14px;
+                line-height: 1.5em;
+            }
+    

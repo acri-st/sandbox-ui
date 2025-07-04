@@ -1,0 +1,140 @@
+#create-project .form-field > label{
+    flex: 0 0 auto;
+    width: 200px;
+}
+
+.form-field-validations{
+    z-index: 10;
+}
+
+#create-project-buttons{
+    display: flex;
+    gap:10px;
+}
+#create-project-buttons .button{
+}
+
+@media screen and (max-width: 800px) {
+    #create-project .section{
+        margin:0px 10px;
+        width: calc(100% - 20px);
+    }
+    
+    #create-project .form-field{
+        flex-direction: column;
+        gap:10px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #create-project-buttons .button{
+        padding: 6px 0px;
+        min-width: 120px;
+    }
+}
+
+#create-project-section{
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    flex:1;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+    #create-project-form{
+        flex:1 1;
+        padding: 30px;
+        padding-right: 20px;
+        min-height: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+        #create-project-form-content{
+            padding-right: 10px;
+            flex:1 1;
+            padding-bottom: 0px;
+            min-height: 0px;
+            overflow: auto;
+        }
+    #create-project-finalisation{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        margin-bottom: 0px;
+    }
+
+
+.resource-table-header{
+    display: flex;
+    align-items: center;
+}
+    .resource-table-header svg{
+        margin-right: 8px;
+    }
+
+
+#project-flavor-selection{
+    display: flex;
+    width: 100%;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+#project-os-selection{
+    display: flex;
+    width: 100%;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+
+#project-application-label,
+#project-application-label label{
+    margin-bottom: 0px;
+}
+
+
+#project-application-selection{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    min-height: 0px;
+    margin-top:20px;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+#default-software{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+    .default-software-name{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.5;
+        font-weight: 200;
+    }
+        .default-software-name svg{
+            font-size: 5px;
+            margin-right:5px;
+        }
+
+
+@media screen and (max-width: 800px) {
+    #create-project-finalisation{
+        padding: 10px;
+    }
+}

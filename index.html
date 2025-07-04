@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <script type="module">
+        import { Buffer } from "buffer";
+        window.Buffer = Buffer;
+        window.global = window;
+    </script>
+
+    <base href="/" />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+		<title>DESP Sandbox</title>
+		<meta name="description" content="DESP Sandbox">
+		<meta name="keywords" content="DESTINE, ESA, DIGITAL TWIN">
+    
+    <!-- <link rel="shortcut icon" href="/assets/logo.ico" /> -->
+    <link rel="shortcut icon" href="/assets/eu.png" />
+
+    
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//matomo.desp-aas.acri-st.fr/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', window.location.hostname === 'sandbox.desp-aas.acri-st.fr' ? '2' : '5']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+
+</html>

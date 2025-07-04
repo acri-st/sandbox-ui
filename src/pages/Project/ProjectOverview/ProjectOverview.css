@@ -1,0 +1,30 @@
+
+/*  ==============================
+    Overview 
+    ============================== */
+.form-field-value-with-operations{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+    .form-field-value-operations{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left:10px;
+    }
+    
+#overview-content li{
+    margin-bottom: 10px;
+}
+
+#overview-alerts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+}
+    #overview-alerts svg{
+        font-size: 32px;
+        margin-right:10px;
+    }

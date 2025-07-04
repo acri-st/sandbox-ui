@@ -1,0 +1,48 @@
+
+/*  ==============================
+    SETTINGS
+    ============================== */
+
+    #settings-content{
+        padding:80px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .setting-field{
+        display: flex;
+        gap: 50px;
+    }
+        .setting-field:last-child{
+            margin-bottom: 0px;
+        }
+        .setting-field label{
+            font-size: 20px;
+            display: flex
+        }
+            .setting-field label span{
+                opacity: 0.4;
+            }
+    
+    @media screen and (max-width: 700px) {
+        .setting-field{
+            display: flex;
+            gap: 20px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        #settings-content{
+            gap: 30px;
+        }
+        .setting-field{
+            gap: 10px;
+        }
+        .setting-field label{
+            font-size: 15px;
+        }
+        .setting-field .button{
+            font-size: 14px;
+            min-width: 110px;
+            padding: 7px 0px;
+        }
+    }

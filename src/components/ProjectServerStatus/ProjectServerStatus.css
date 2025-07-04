@@ -1,0 +1,53 @@
+.project-server-status-container{
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+}
+    .project-server-status-container label{
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.5;
+    }
+
+
+    .project-server-status{
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        --status-color: rgb(182, 182, 182);
+    }
+
+    .project-server-status svg{
+        font-size: 0.8em;
+        margin-right: 10px;
+        color: var(--status-color);
+    }
+        .project-server-status.initialising{
+            --status-color: rgb(255, 208, 0);
+        }
+        .project-server-status.CREATING{
+            --status-color: rgb(84, 84, 253);
+        }
+        .project-server-status.INSTALLING{
+            --status-color: rgb(79, 224, 234);
+        }
+        .project-server-status.RESETTING{
+            --status-color: rgb(234, 139, 79);
+        }
+        .project-server-status.SUSPENDED{
+            --status-color: rgb(221, 185, 27);
+        }
+        .project-server-status.ERROR{
+            --status-color: rgb(255, 60, 60);
+        }
+        .project-server-status.READY{
+            --status-color: rgb(110, 209, 43);
+        }
+        .project-server-status-label{
+            font-size: 0.8em;
+            /* font-size: 14px; */
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }

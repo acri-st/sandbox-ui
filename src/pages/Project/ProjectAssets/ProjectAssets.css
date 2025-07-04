@@ -1,0 +1,112 @@
+#assets-content{
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    overflow: hidden;
+    /* flex:1 1 auto; */
+    height: 100%;
+}
+
+    #assets-list,
+    #assets-list .table,
+    #assets-list .table table{
+        display: flex;
+        flex-direction: column;
+        min-height: 0px;
+        max-height: 100%;
+        overflow: auto;
+        width: 100%;
+    }
+        #assets-list .table table tr{
+            display: flex;
+        }
+            #assets-list .table table th,
+            #assets-list .table table td{
+                /* flex:1; */
+            }
+            #assets-list .table table td{
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+            #assets-list .table table th .table-header-value{
+                font-size: 16px;
+                /* padding: 10px 15px; */
+            }
+        #assets-list .table tbody{ 
+            display: flex;
+            flex-direction: column;
+            min-height: 0px;
+            height: 100%;
+            /* width: 100%; */
+            overflow: auto;
+        }
+        #assets-list .table table .table-value{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        #assets-list .table table .table-header.name,
+        #assets-list .table table .table-value.name{
+            flex:0 0 180px;
+        }
+        #assets-list .table table .table-header.category,
+        #assets-list .table table .table-value.category{
+            flex:0 0 220px;
+        }
+        #assets-list .table table .table-header.type,
+        #assets-list .table table .table-value.type{
+            flex:0 0 220px;
+        }
+        #assets-list .table table .table-header.description,
+        #assets-list .table table .table-value.description{
+            /* min-width: 200px; */
+            flex:1 1 auto;
+        }
+        @media (max-width: 1200px) {
+            #assets-list .table table .table-header.description,
+            #assets-list .table table .table-value.description{
+                flex:0 0 200px;
+            }
+        }
+        #assets-list .table table .table-operations{
+            flex:0 0 auto;
+        }
+
+        
+/*  ==============================
+    ASSETS OLD
+    ============================== */
+/* #assets-content{
+}
+
+#assets-top{
+    margin-bottom: 20px;
+}
+
+#assets-list{
+}
+    #assets-list-topbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #assets-list-container{
+        display: flex;
+    }
+        #assets-list-container{
+            display: flex;
+        }
+            #assets-list-icon{
+
+            }
+                #assets-list-icon svg{
+                    color:rgb(var(--theme-color-1),0.2);
+                    font-size: 300px;
+                }
+            #assets-list-table{
+                flex:1;
+                margin-left: 50px;
+            } */

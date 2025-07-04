@@ -1,0 +1,101 @@
+
+
+#user-guides{
+    display: flex;
+    min-height: 0px;
+}
+
+
+#user-guides-menu{
+    overflow: auto;
+    width: 500px;
+    margin-right:30px;
+}
+.user-guides-menu-content{
+    padding-right: 20px;
+    height: 100%;
+    overflow: auto;
+    min-height: 0;
+}
+.user-guide-category{
+    margin-bottom: 10px;
+}
+    .user-guide-category-toggle{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background-color: rgb(var(--theme-color-2),0.5);
+        padding: 12px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid white;
+    }
+        .user-guide-category-toggle-icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+        }
+        .user-guide-category-toggle label{
+            text-transform: capitalize;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    .user-guide-category-list{
+        padding-left: 40px;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+        .user-guide-menu-item{
+            opacity: 0.5;
+            padding:3px;
+            font-size: 15px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+            .user-guide-menu-item.selected,
+            .user-guide-menu-item:hover
+            {
+                text-decoration: underline;
+                opacity: 1;
+            }
+
+#user-guides-content{
+    flex: 1;
+    min-height: 0;
+}
+    .user-guides-content-title{
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1em;
+        padding-bottom: 10px;
+    }
+    .user-guides-content-container{
+        padding-right: 20px;
+        height: 100%;
+        overflow: auto;
+        min-height: 0;
+    }
+        .user-guides-content-container p{
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.6em;
+            text-align: justify;
+            margin-top: 0px;
+        }
+
+        #user-guides-content p{
+            margin-top:0px;
+            margin-bottom: 5px;
+        }
+        #user-guides-content h2{
+            font-size: 30px;
+        }
+        #user-guides-content h3{
+            font-size: 22px;
+            font-weight: 800;
+        }
+        #user-guides-content .sc-gjcoXW{
+            margin-bottom: 5px;
+        }
+
+        

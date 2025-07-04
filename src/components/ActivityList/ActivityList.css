@@ -1,0 +1,73 @@
+.activity-list{
+}
+
+    .activity-list-title{
+        padding-bottom:10px;
+        margin-bottom:10px;
+        font-size: 18px;
+        font-weight: 100;
+        border-bottom: 1px solid rgb(255,255,255,0.5);
+    }
+    .activity-item-list{
+        padding: 10px 0px;
+    }
+        .no-activity{
+            font-weight: 300;
+            font-size: 13px;
+        }
+        .activity-item{
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            padding-bottom: 14px;
+            font-weight: 100;
+            width: 100%;
+            min-width: 0;
+        }
+            .activity-item-date{
+                /* flex:1 0; */
+                white-space: nowrap;
+            }
+            .activity-item-tags{
+                display: flex;
+                align-items: center;
+            }
+                .activity-item-tag{
+                    margin-left:3px;
+                    padding: 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgb(93, 93, 205);
+                    color:black;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 10px;
+                    font-size: 10px;
+                    line-height: 1em;
+                    font-weight: 800;
+                    
+                }
+                .activity-item-tag.warn{
+                    font-size: 13px;
+                    padding: 0px;
+                    background-color: transparent;
+                    color:rgb(255, 170, 0);
+                }
+                /* .activity-item-tag:first-child{
+                    margin-left:0px;
+                } */
+            .activity-item-message{
+                margin-left:3px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                flex: 1 1;
+            }
+            .activity-item-chevron{
+                font-size: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left:5px;
+            }

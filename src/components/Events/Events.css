@@ -1,0 +1,123 @@
+.events{
+    height: 100%;
+    min-height: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 300px;
+}
+    .events-title{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.409);
+        padding-bottom: 6px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .events-list{
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: 0px;
+        overflow: auto;
+        gap:10px;
+    }
+        .event-item-loading,
+        .event-item{
+            display: flex;
+            gap:10px;
+            font-size: 13px;
+            align-items: center;
+            white-space: nowrap;
+        }
+            .event-item-date-loading,
+            .event-item-date{
+                flex:0 0 auto;
+                display: flex;
+                gap:10px;
+                opacity: 0.8;
+            }
+            .event-item-date-loading{
+                background-color: rgb(var(--loading-color-1));
+                height: 16px;
+                width: 80px;
+                border-radius: var(--loading-item-radius);
+            }
+            .event-item-type-loading,
+            .event-item-status-loading,
+            .event-item-type,
+            .event-item-status{
+                font-size: 10px;
+                padding: 3px;
+                text-align: center;
+            }
+            .event-item-type-loading,
+            .event-item-status-loading{
+                background-color: rgb(var(--loading-color-1));
+                height: 16px;
+                width: 80px;
+                border-radius: var(--loading-item-radius);
+            }
+            .event-item-type-loading{
+                width: 60px;
+            }
+                .event-item-type{
+                    flex:0 0 auto;
+                    padding: 3px;
+                    width: 60px;
+                    border-radius: 5px;
+                }
+                    .event-item-type.pipeline{
+                        background-color: rgb(164, 86, 3);
+                    }
+                    .event-item-type.vm{
+                        background-color: rgb(42, 52, 73);
+                    }
+                .event-item-status{
+                    flex:0 0 auto;
+                    padding: 3px;
+                    width: 80px;
+                    border-radius: 5px;
+                    background-color: var(--status-inactive);
+                }
+
+                    .event-item-status.resetting,
+                    .event-item-status.deleting,
+                    .event-item-status.suspending{
+                        background-color: var(--status-ongoing);
+                    }
+                    .event-item-status.ready,
+                    .event-item-status.succeeded{
+                        background-color: var(--status-complete);
+                    }
+                    .event-item-status.deleted,
+                    .event-item-status.failed,
+                    .event-item-status.error{
+                        background-color: var(--status-error);
+                    }
+                    .event-item-status.creating,
+                    .event-item-status.resuming,
+                    .event-item-status.installing,
+                    .event-item-status.running,
+                    .event-item-status.started{
+                        background-color: var(--status-running);
+                    }
+            .event-item-message-loading,
+            .event-item-message{
+                max-width: 200px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .event-item-message-loading{
+                background-color: rgb(var(--loading-color-1));
+                height: 16px;
+                width: 200px;
+                border-radius: var(--loading-item-radius);
+            }
+
+            @media screen and (max-width: 580px) {
+                .event-item{
+                    gap:5px;
+                }
+                .event-item-date{
+                    font-size: 12px;
+                }
+            }
