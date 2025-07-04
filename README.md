@@ -119,4 +119,4 @@ make test
 
 ## Contributing
 
-Check out the **CONTRIBUTING.md** for more details on how to contribute.
+Check out the [CONTRIBUTING.md](https://github.com/acri-st/DESPAAS-sandbox-ui/blob/development/CONTRIBUTING.md) for more details on how to contribute.
