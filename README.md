@@ -1,4 +1,4 @@
-# DESP-AAS Sandbox UI
+# Sandbox UI
 
 
 ## Table of Contents
@@ -15,9 +15,9 @@
 
 ## Introduction
 
-###  What is the DESP-AAS Sandbox?
+###  What is the Sandbox?
 
-DESP-AAS Sandbox is a service that allows users to develop applications and models using cloud based services and to ease the deployment to the DESP-AAS collaborative platform.
+DESP-AAS Sandbox is a service that allows users to develop applications and models using cloud based services and to ease the deployment to the collaborative platform.
 
 The Microservices that make up the Sandbox project are the following: 
 - **Auth** Authentication service tu authenticate users.
@@ -25,14 +25,14 @@ The Microservices that make up the Sandbox project are the following:
 - **VM management** manages the virtual machines for the projects. These virtual machines are where the user manages their project and develops.
 - **Storage** Manages the project git files.
 
-![DESP-AAS Sandbox UI Architecture](https://github.com/acri-st/DESPAAS-sandbox-ui/blob/development/docs/architecture.png?raw=true)
+![DESP-AAS Sandbox UI Architecture](https://github.com/acri-st/sandbox-ui/blob/development/docs/architecture.png?raw=true)
 
 
 ### What is the Sandbox UI?
 
-The sandbox UI is a web application that interfaces with the microservices that comprise the DESP-AAS (Data Exchange and Service Platform - As A Service) ecosystem. It provides a user-friendly interface for testing, debugging, and interacting with various microservices in a controlled sandbox environment.
+The sandbox UI is a web application that interfaces with the microservices that comprise the Sandbox ecosystem. It provides a user-friendly interface for testing, debugging, and interacting with various microservices in a controlled sandbox environment.
 
-The Sandbox UI also uses a DESP-AAS common library that contains interfaces to DESP-AAS services and styling.
+The Sandbox UI also uses a common library that contains interfaces to services and styling.
 
 ## Prerequisites
 
@@ -45,9 +45,9 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/acri-st/DESPAAS-sandbox-ui.git
+git clone https://github.com/acri-st/sandbox-ui.git
 # OR
-git clone git@github.com:acri-st/DESPAAS-sandbox-ui.git
+git clone git@github.com:acri-st/sandbox-ui.git
 cd sandbox-ui
 ```
 
@@ -119,4 +119,4 @@ make test
 
 ## Contributing
 
-Check out the [CONTRIBUTING.md](https://github.com/acri-st/DESPAAS-sandbox-ui/blob/development/CONTRIBUTING.md) for more details on how to contribute.
+Check out the [CONTRIBUTING.md](https://github.com/acri-st/sandbox-ui/blob/development/CONTRIBUTING.md) for more details on how to contribute.
