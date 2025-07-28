@@ -1,5 +1,6 @@
 # Sandbox UI
 
+📌 [DESP-AAS Sandbox Parent Repository](https://github.com/acri-st/DESP-AAS-Sandbox)
 
 ## Table of Contents
 
